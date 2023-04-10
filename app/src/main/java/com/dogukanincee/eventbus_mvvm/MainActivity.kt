@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var postButton: Button
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Registers this activity as an EventBus subscriber when started.
      */
-    override fun onStart() {
+    public override fun onStart() {
         super.onStart()
         EventBus.getDefault().register(this)
     }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Unregisters this activity as an EventBus subscriber when stopped.
      */
-    override fun onStop() {
+    public override fun onStop() {
         super.onStop()
         EventBus.getDefault().unregister(this)
     }
